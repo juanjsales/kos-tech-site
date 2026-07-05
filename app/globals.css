@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    /* Animação do Fluxo Prismático Arco-íris */
+    @keyframes cyberGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .prism-glow {
+      background: linear-gradient(45deg, #ff00ff, #00ffff, #ff0000, #00ff00, #0000ff);
+      background-size: 400% 400%;
+      animation: cyberGlow 20s linear infinite;
+      filter: blur(40px);
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    /* Thin rainbow line for logo separator */
+    .rainbow-line {
+      background: linear-gradient(45deg, #ff00ff, #00ffff, #ff0000, #00ff00, #0000ff);
+      background-size: 400% 400%;
+      animation: cyberGlow 20s linear infinite;
+      height: 2px;
+    }
+
+    /* Reusable full rainbow gradient */
+    .rainbow-gradient {
+      background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff, #ff00ff);
+      background-size: 400% 400%;
+      animation: cyberGlow 20s linear infinite;
+    }
+
+    /* Small rainbow dot for logo */
+    .rainbow-dot {
+      background: conic-gradient(from 0deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff, #ff00ff);
+      background-size: 100% 100%;
+      animation: cyberGlow 20s linear infinite;
+    }
+
+    /* Static rainbow gradient with shimmer (used for line and dot) */
+    .rainbow-static {
+      background: linear-gradient(90deg,
+        #ff0000,   /* Red */
+        #ff7f00,   /* Orange */
+        #ffff00,   /* Yellow */
+        #00ff00,   /* Green */
+        #0000ff,   /* Blue */
+        #8b00ff,   /* Indigo */
+        #ff00ff    /* Violet */
+      );
+      background-size: 100% 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .rainbow-static::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+      background-size: 200% 100%;
+      animation: shimmer 2s linear infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    @keyframes borderFlow {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    .animate-border-flow {
+        background-size: 200% auto;
+        animation: borderFlow 4s linear infinite;
+    }
+/* Decorative thin rainbow line (no shimmer) */
+.rainbow-decor {
+  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff, #ff00ff);
+  position: relative;
+  overflow: hidden;
+}
+.rainbow-decor::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Colorful glowing border for tables */
+.rainbow-table {
+  /* Use a slimmer gradient border for a tighter fit */
+  border: 2px solid transparent !important;
+  border-image: linear-gradient(
+    90deg,
+    #ff0000, #ff7f00, #ffff00,
+    #00ff00, #0000ff, #8b00ff, #ff00ff
+  ) 1 !important;
+  border-radius: 8px;
+  box-sizing: border-box; /* keep border inside width */
+  /* Keep table as a block element but limit its width to its container */
+  display: block;
+  max-width: 100%;
+  border-collapse: separate; /* ensure rounded corners show */
+  border-spacing: 0;
+  /* Add a small inner padding so content doesn't touch the border */
+  padding: 4px;
+  /* Subtle glow without extending the visual box */
+  box-shadow: 0 0 8px 1px rgba(255,255,255,0.5);
+  animation: borderFlow 4s linear infinite;
+}
+
+/* Subtle text gradient for headings (low opacity) */
+.rainbow-subtle {
+  background: linear-gradient(90deg, rgba(255,0,0,.3), rgba(255,127,0,.3), rgba(255,255,0,.3), rgba(0,255,0,.3), rgba(0,0,255,.3), rgba(139,0,255,.3), rgba(255,0,255,.3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Dark overlay for better contrast */
+.bg-dark-overlay {
+  background: rgba(0,0,0,0.6);
+}
+} 
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .rainbow-decor::after,
+  .rainbow-table,
+  .animate-border-flow,
+  .shimmer::after {
+    animation: none !important;
+  }
+}
+
