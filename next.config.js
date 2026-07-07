@@ -9,7 +9,16 @@ const nextConfig = {
       },
     ],
   },
-  // You can add other Next.js config options here
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.(mp4|webm)$/i,
+      type: 'asset/resource',
+      generator: {
+        filename: 'static/media/[name].[hash][ext]',
+      },
+    });
+    return config;
+  },
 };
 
 module.exports = nextConfig;
