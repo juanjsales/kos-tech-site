@@ -15,15 +15,15 @@ export function Pricing() {
                         <thead>
                             <tr className="border-b border-white/10 text-xs font-bold tracking-wider uppercase text-slate-400 font-display bg-dark-overlay">
                                 <th className="p-6 w-2/5">Módulos de Sistema</th>
-                                <th className="p-6 text-center">📍 Local<br /><span className="text-white text-base font-normal lowercase font-sans block mt-1">R$ 250</span></th>
-                                <th className="p-6 text-center">⚡ Site Premium<br /><span className="text-white text-base font-normal lowercase font-sans block mt-1">R$ 1.500</span></th>
+                                <th className="p-6 text-center">📍 Local<br /><span className="text-white text-base font-normal font-sans block mt-1">R$ 250</span></th>
+                                <th className="p-6 text-center">⚡ Site Premium<br /><span className="text-white text-base font-normal font-sans block mt-1">R$ 1.500</span></th>
                                 <th className="p-6 text-center bg-blue-500/5 border-x border-white/5 relative">
                                     
                                     <div className="inline-flex items-center justify-center p-0.5 rounded-full bg-gradient-to-br from-red-500 via-green-500 to-purple-600 mb-2">
                                         <span className="inline-block text-[9px] font-bold text-white px-2 py-0.5 bg-[#05070F] rounded-full uppercase tracking-widest mb-1">Melhor Custo-Benefício</span>
                                     </div>
                                     <span className="block text-white mt-2">🪐 Ecossistema</span>
-                                    <span className="text-blue-400 text-base font-bold lowercase font-sans block mt-1">R$ 1.750</span>
+                                    <span className="text-blue-400 text-base font-bold font-sans block mt-1">R$ 1.750</span>
                                 </th>
                             </tr>
                         </thead>

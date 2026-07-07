@@ -11,13 +11,12 @@ export function PortfolioCard({ item }: { item: PortfolioItem }) {
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return;
+    if (!video || !item.videoUrl) return;
 
     if (isHovered) {
       const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise.catch((error) => {
-          // Play request interrupted by a call to pause() or not loaded yet
           console.debug("Video play interrupted:", error);
         });
       }
@@ -25,7 +24,7 @@ export function PortfolioCard({ item }: { item: PortfolioItem }) {
       video.pause();
       video.currentTime = 0;
     }
-  }, [isHovered]);
+  }, [isHovered, item.videoUrl]);
 
   return (
     <Link href={item.link} target="_blank" rel="noopener noreferrer">

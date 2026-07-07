@@ -13,10 +13,12 @@ export function Terminal() {
         { text: '> Inicializando escaneamento de mercado local...', color: 'text-blue-400' },
         { text: '// Aguardando inserção de dados do comércio...', color: 'text-slate-500' },
     ]);
-    const consoleEndRef = useRef<HTMLDivElement>(null);
+    const terminalBodyRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        consoleEndRef.current?.scrollIntoView({ behavior: 'auto' });
+        if (terminalBodyRef.current) {
+            terminalBodyRef.current.scrollTop = terminalBodyRef.current.scrollHeight;
+        }
     }, [outputLines]);
 
     const handleAudit = (e: FormEvent<HTMLFormElement>) => {
@@ -55,11 +57,10 @@ export function Terminal() {
                 <span className="text-[10px] font-mono tracking-wider text-slate-500 uppercase">KOS_CORE_AUDIT_v2.6</span>
             </div>
 
-            <div className="font-mono text-xs text-slate-400 space-y-3 h-64 overflow-y-auto" aria-live="polite">
+            <div ref={terminalBodyRef} className="font-mono text-xs text-slate-400 space-y-3 h-64 overflow-y-auto" aria-live="polite">
                 {outputLines.map((line, index) => (
                     <p key={index} className={line.color}>{line.text}</p>
                 ))}
-                <div ref={consoleEndRef} />
             </div>
 
             <form onSubmit={handleAudit} className="mt-4 pt-4 border-t border-white/5 flex gap-2">
