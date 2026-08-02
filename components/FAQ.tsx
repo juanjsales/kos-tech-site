@@ -9,39 +9,34 @@ export function FAQ() {
 
   const faqs = [
     {
-      question: "Como é garantido que nem eu nem meu cliente pagaremos nada por ferramentas (Vercel, GitHub, WhatsApp, Notion)?",
-      answer:
-        "Utilizamos exclusivamente as camadas 100% gratuitas (Free Tier) e integrações nativas diretas. A Vercel e o GitHub oferecem 100 GB de tráfego mensal gratuito (suficiente para dezenas de milhares de acessos). No WhatsApp, utilizamos o WhatsApp Direct (wa.me) e automações assíncronas que usam o próprio aplicativo do cliente, sem tarifas de APIs cobradas por mensagem. O Notion e o Google Sheets são 100% gratuitos para gestão e salvamento de dados."
-    },
-    {
       question: "Realmente não há custos mensais de hospedagem?",
       answer:
-        "Sim! Desenvolvemos aplicações estáticas altamente otimizadas e serverless hospedadas na CDN Global da Vercel/GitHub Pages. O plano gratuito dessas plataformas suporta milhares de acessos diários sem cobrar nenhum centavo por hospedagem."
+        "Sim! Desenvolvemos aplicações estáticas altamente otimizadas hospedadas em redes de alta velocidade (Vercel/GitHub). Essa tecnologia suporta milhares de acessos diários sem cobrar mensalidades de servidor."
     },
     {
-      question: "Qual é o prazo médio de entrega de uma Landing Page ou Ecossistema?",
+      question: "Qual é o prazo médio de entrega do projeto?",
       answer:
-        "Dependendo do escopo selecionado, a entrega completa varia de 3 a 7 dias úteis. Todo o acompanhamento do cronograma e entregáveis é feito em tempo real através do nosso Hub Interativo no Notion."
+        "Dependendo do plano escolhido, a entrega completa varia de 3 a 7 dias úteis. Todo o acompanhamento do projeto é feito em tempo real em um painel transparente e fácil de usar."
     },
     {
-      question: "Emitente de Nota Fiscal e contrato PJ?",
+      question: "Emitente de Nota Fiscal e contrato de prestação de serviços?",
       answer:
-        "Sim, atuamos 100% formalizados com emissão de Nota Fiscal (PJ) para empresas B2B, infoprodutores e ONGs, além de contrato de prestação de serviços com garantia explícita."
+        "Sim, atuamos 100% formalizados com emissão de Nota Fiscal (PJ) para empresas B2B, infoprodutores e ONGs, além de contrato transparente com garantia explícita."
     },
     {
-      question: "Como funciona o direcionamento automático para o WhatsApp?",
+      question: "Como funciona o atendimento automático no WhatsApp?",
       answer:
-        "Quando um visitante preenche o formulário no seu site, uma mensagem formatada é gerada instantaneamente e abre a conversa direta com o WhatsApp da sua empresa, sem intermediários pagos nem cobrança por mensagem."
+        "Quando um cliente preenche o formulário no seu site, os dados são organizados e abrem a conversa direto no WhatsApp da sua empresa, permitindo atendimento instantâneo sem digitar nada manual."
     },
     {
-      question: "Posso utilizar meu domínio personalizado (.com.br / .com)?",
+      question: "Posso utilizar meu próprio domínio (.com.br / .com)?",
       answer:
-        "Com certeza! Configuramos as entradas de DNS (A / CNAME) e ativamos o Certificado de Segurança SSL (HTTPS) de forma 100% gratuita e definitiva no seu próprio domínio."
+        "Com certeza! Configuramos seu domínio personalizado e ativamos o Certificado de Segurança SSL (o cadeado de segurança HTTPS) de forma 100% gratuita no seu site."
     },
     {
       question: "Como funciona a Garantia Nativa de 30 Dias?",
       answer:
-        "Após o lançamento do site, você conta com 30 dias de suporte técnico incluso para ajustes finos, correções e acompanhamento inicial para garantir total estabilidade da sua operação."
+        "Após o lançamento do site, você conta com 30 dias de suporte técnico incluso para tirar dúvidas, fazer ajustes finos e garantir que sua empresa opere sem sobressaltos."
     }
   ];
 
@@ -59,10 +54,10 @@ export function FAQ() {
             Tire Suas Dúvidas
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-sans tracking-tight">
-            Perguntas Frequentes & Limites Gratuitos (FAQ)
+            Perguntas Frequentes (FAQ)
           </h2>
           <p className="text-slate-400 text-sm md:text-base">
-            Tudo o que você precisa saber sobre nossa arquitetura 100% isenta de mensalidades e respeitando as políticas do Free Tier.
+            Respostas diretas para as dúvidas mais comuns de nossos clientes.
           </p>
         </div>
 
