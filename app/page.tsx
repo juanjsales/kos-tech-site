@@ -3,7 +3,6 @@ import { Hero } from "@/components/Hero";
 import { ServicesPilars } from "@/components/ServicesPilars";
 import { Methodology } from "@/components/Methodology";
 import { CasesSection } from "@/components/CasesSection";
-import { ROICalculator } from "@/components/ROICalculator";
 import { Pricing } from "@/components/Pricing";
 import { FAQ } from "@/components/FAQ";
 import { DiagnosticForm } from "@/components/DiagnosticForm";
@@ -32,9 +31,6 @@ export default function Home() {
 
         {/* Section 4: Cases de Sucesso & Portfólio */}
         <CasesSection />
-
-        {/* Section: Calculadora Interativa de Economia (ROI) */}
-        <ROICalculator />
 
         {/* Pricing / Tabela de Engenharia */}
         <Pricing />
