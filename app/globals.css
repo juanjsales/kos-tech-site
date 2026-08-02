@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Animação do Fluxo Prismático Arco-íris & RGB CyberGlow */
+  @keyframes cyberGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .prism-glow {
+    background: linear-gradient(45deg, #2563eb, #06b6d4, #3b82f6, #10b981, #ec4899);
+    background-size: 300% 300%;
+    animation: cyberGlow 15s linear infinite;
+    filter: blur(50px);
+    opacity: 0.45;
+    pointer-events: none;
+  }
+
+  /* Thin RGB rainbow line */
+  .rainbow-line {
+    background: linear-gradient(90deg, #2563eb, #06b6d4, #10b981, #f59e0b, #ec4899, #3b82f6);
+    background-size: 300% 300%;
+    animation: cyberGlow 8s ease infinite;
+    height: 2px;
+  }
+
+  /* Reusable full rainbow gradient */
+  .rainbow-gradient {
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+    background-size: 400% 400%;
+    animation: cyberGlow 12s ease infinite;
+  }
+
+  /* Decorative thin rainbow line with shimmer */
+  .rainbow-decor {
+    background: linear-gradient(90deg, #2563eb, #06b6d4, #10b981, #f59e0b, #ec4899, #3b82f6);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rainbow-decor::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.7), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  /* Glowing RGB / Tech Cyan table border */
+  .rainbow-table {
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    box-shadow: 0 0 20px 2px rgba(6, 182, 212, 0.15), inset 0 0 15px 1px rgba(37, 99, 235, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  /* Card RGB Hover Glow */
+  .card-rgb-glow {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .card-rgb-glow::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 1rem;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.5), rgba(6, 182, 212, 0.5), rgba(16, 185, 129, 0.3));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+  }
+
+  .card-rgb-glow:hover::before {
+    opacity: 1;
+    background: linear-gradient(135deg, #2563eb, #06b6d4, #10b981, #ec4899);
+  }
+
+  /* Smooth custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #020617;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #020617;
+  color: #f8fafc;
+  font-family: var(--font-sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif);
+}
