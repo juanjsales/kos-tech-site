@@ -9,9 +9,14 @@ export function FAQ() {
 
   const faqs = [
     {
+      question: "Como é garantido que nem eu nem meu cliente pagaremos nada por ferramentas (Vercel, GitHub, WhatsApp, Notion)?",
+      answer:
+        "Utilizamos exclusivamente as camadas 100% gratuitas (Free Tier) e integrações nativas diretas. A Vercel e o GitHub oferecem 100 GB de tráfego mensal gratuito (suficiente para dezenas de milhares de acessos). No WhatsApp, utilizamos o WhatsApp Direct (wa.me) e automações assíncronas que usam o próprio aplicativo do cliente, sem tarifas de APIs cobradas por mensagem. O Notion e o Google Sheets são 100% gratuitos para gestão e salvamento de dados."
+    },
+    {
       question: "Realmente não há custos mensais de hospedagem?",
       answer:
-        "Sim! Desenvolvemos aplicações estáticas altamente otimizadas e serverless hospedadas na CDN Global da Vercel/GitHub Pages. O plano gratuito dessas plataformas suporta centenas de milhares de acessos mensais sem cobrar nenhum centavo por hospedagem."
+        "Sim! Desenvolvemos aplicações estáticas altamente otimizadas e serverless hospedadas na CDN Global da Vercel/GitHub Pages. O plano gratuito dessas plataformas suporta milhares de acessos diários sem cobrar nenhum centavo por hospedagem."
     },
     {
       question: "Qual é o prazo médio de entrega de uma Landing Page ou Ecossistema?",
@@ -24,9 +29,9 @@ export function FAQ() {
         "Sim, atuamos 100% formalizados com emissão de Nota Fiscal (PJ) para empresas B2B, infoprodutores e ONGs, além de contrato de prestação de serviços com garantia explícita."
     },
     {
-      question: "Como funciona a automação com WhatsApp e CRMs?",
+      question: "Como funciona o direcionamento automático para o WhatsApp?",
       answer:
-        "Integramos os formulários e botões do site diretamente à API do WhatsApp e a ferramentas como Google Sheets, Hubspot, Pipedrive ou ActiveCampaign via Webhooks assíncronos, garantindo envio imediato sem atrasos."
+        "Quando um visitante preenche o formulário no seu site, uma mensagem formatada é gerada instantaneamente e abre a conversa direta com o WhatsApp da sua empresa, sem intermediários pagos nem cobrança por mensagem."
     },
     {
       question: "Posso utilizar meu domínio personalizado (.com.br / .com)?",
@@ -54,10 +59,10 @@ export function FAQ() {
             Tire Suas Dúvidas
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-sans tracking-tight">
-            Perguntas Frequentes (FAQ)
+            Perguntas Frequentes & Limites Gratuitos (FAQ)
           </h2>
           <p className="text-slate-400 text-sm md:text-base">
-            Tudo o que você precisa saber sobre nossa engenharia de software, modelos de cobrança e prazos.
+            Tudo o que você precisa saber sobre nossa arquitetura 100% isenta de mensalidades e respeitando as políticas do Free Tier.
           </p>
         </div>
 
