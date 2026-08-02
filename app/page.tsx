@@ -4,6 +4,7 @@ import { ServicesPilars } from "@/components/ServicesPilars";
 import { Methodology } from "@/components/Methodology";
 import { CasesSection } from "@/components/CasesSection";
 import { Pricing } from "@/components/Pricing";
+import { FAQ } from "@/components/FAQ";
 import { DiagnosticForm } from "@/components/DiagnosticForm";
 import { Footer } from "@/components/Footer";
 
@@ -32,6 +33,9 @@ export default function Home() {
 
         {/* Pricing / Tabela de Engenharia */}
         <Pricing />
+
+        {/* Section FAQ: Dúvidas Frequentes */}
+        <FAQ />
 
         {/* Section 5: Formulário de Captura & Diagnóstico */}
         <DiagnosticForm />

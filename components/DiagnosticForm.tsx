@@ -20,11 +20,15 @@ export function DiagnosticForm() {
 
     setIsSubmitting(true);
 
-    // Simulate Webhook / API dispatch
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1200));
+      // 1. Post data to Serverless API Route /api/diagnostico
+      await fetch('/api/diagnostico', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      }).catch((err) => console.warn('API Endpoint notice:', err));
 
-      // Construct WhatsApp pre-filled message as a fallback link
+      // 2. Construct WhatsApp message link
       const text = encodeURIComponent(
         `Olá Juan! Solicitei um diagnóstico técnico no site KOS:\n\n` +
         `• Nome: ${formData.nome}\n` +
@@ -36,10 +40,10 @@ export function DiagnosticForm() {
       setIsSubmitted(true);
       setIsSubmitting(false);
 
-      // Open WhatsApp direct in background or tab
+      // Open WhatsApp direct in background or tab after 800ms
       setTimeout(() => {
         window.open(`https://wa.me/5521981756362?text=${text}`, '_blank');
-      }, 1000);
+      }, 800);
 
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
@@ -86,7 +90,7 @@ export function DiagnosticForm() {
               <div className="space-y-2">
                 <h3 className="text-2xl font-bold text-white">Solicitação Recebida com Sucesso!</h3>
                 <p className="text-slate-300 text-sm max-w-md mx-auto">
-                  Obrigado, <strong className="text-cyan-400">{formData.nome}</strong>. Redirecionando para o WhatsApp para atendimento prioritário...
+                  Obrigado, <strong className="text-cyan-400">{formData.nome}</strong>. Sua solicitação foi registrada e estamos redirecionando para o WhatsApp para atendimento prioritário...
                 </p>
               </div>
               <div className="pt-4">
