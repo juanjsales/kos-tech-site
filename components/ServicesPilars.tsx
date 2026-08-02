@@ -8,11 +8,11 @@ export function ServicesPilars() {
     {
       id: "web-apps",
       icon: Globe,
-      title: "Aplicações Web & Landing Pages de Alta Conversão",
-      subtitle: "Arquitetura Frontend Moderna & Mobile-First",
+      title: "Websites & Páginas de Vendas de Alta Conversão",
+      subtitle: "Design Moderno & Rápido no Celular",
       description:
-        "Desenvolvimento de interfaces ultra-rápidas otimizadas para conversão e captura de clientes, integrando SEO Técnico, compressão WebP e Social Cards (Open Graph).",
-      tags: ["Mobile-First", "SEO Técnico", "WebP Media", "Open Graph", "Vercel / Next.js"],
+        "Criamos sites elegantes e ultra-rápidos que prendem a atenção do cliente, aparecem bem posicionados nas buscas do Google e carregam na hora sem travar.",
+      tags: ["Funciona Perfeito no Celular", "Apareça no Google (SEO)", "Fotos & Mídias Super Leves", "Links Bonitos no WhatsApp"],
       gradient: "from-blue-500/20 via-cyan-500/10 to-transparent",
       accentColor: "text-cyan-400",
       borderColor: "hover:border-cyan-500/50"
@@ -20,11 +20,11 @@ export function ServicesPilars() {
     {
       id: "automation",
       icon: Cpu,
-      title: "Automação de Workflows & Backend",
-      subtitle: "Integrações de Alta Conectividade via API",
+      title: "Automação de Vendas & WhatsApp Automático",
+      subtitle: "Robôs e Integrações Inteligentes",
       description:
-        "Conexão de sistemas e robôs de automação que disparam mensagens no WhatsApp, sincronizam dados em tempo real no Google Sheets/CRMs e processam pagamentos (Stripe & Mercado Pago).",
-      tags: ["Webhooks API", "WhatsApp Bot", "CRMs & Sheets", "Stripe / Mercado Pago", "Serverless Functions"],
+        "Conectamos seu site para enviar mensagens automáticas no WhatsApp do cliente assim que ele preenche um formulário, além de salvar dados na sua planilha e receber pagamentos.",
+      tags: ["Respostas no WhatsApp", "Contatos Salvos na Planilha", "Recebimento PIX e Cartão", "Processos no Automático"],
       gradient: "from-cyan-500/20 via-emerald-500/10 to-transparent",
       accentColor: "text-emerald-400",
       borderColor: "hover:border-emerald-500/50"
@@ -32,11 +32,11 @@ export function ServicesPilars() {
     {
       id: "consulting",
       icon: Layers,
-      title: "Consultoria de Processos & Arquitetura",
-      subtitle: "Eliminação de Custos Recorrentes e Gargalos",
+      title: "Consultoria & Redução de Custos de TI",
+      subtitle: "Fim das Mensalidades de Servidor",
       description:
-        "Mapeamento de gargalos operacionais, migração de infraestruturas caras para soluções Serverless de custo zero de manutenção e blindagem de segurança digital.",
-      tags: ["Serverless CDN", "Custo Mensal R$0", "Mapeamento POP", "Performance Audit", "Cloud Security"],
+        "Analisamos sua empresa para eliminar gastos desnecessários com mensalidades de hospedagem de site e automatizar tarefas manuais que fazem sua equipe perder tempo.",
+      tags: ["Sem Mensalidade de Servidor", "Economia Financeira", "Relatórios Simplificados", "Suporte Especializado"],
       gradient: "from-purple-500/20 via-blue-500/10 to-transparent",
       accentColor: "text-purple-400",
       borderColor: "hover:border-purple-500/50"
@@ -50,13 +50,13 @@ export function ServicesPilars() {
         {/* Header Title */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 bg-cyan-950/60 border border-cyan-800/60 px-3.5 py-1.5 rounded-full inline-block">
-            Pilares de Soluções
+            O Que Fazemos Por Você
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white font-sans tracking-tight">
-            Engenharia de Soluções Sob Medida para o Seu Negócio
+            Soluções Práticas para Fazer Seu Negócio Crescer
           </h2>
           <p className="text-slate-400 text-base md:text-lg">
-            Combinamos arquitetura web de ponta com automação estratégica para acelerar vendas e eliminar tarefas manuais.
+            Unimos design impactante com automações que economizam seu tempo e trazem mais clientes dispostos a comprar.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export function ServicesPilars() {
                       <Icon className="w-7 h-7" />
                     </div>
                     <span className="text-[10px] font-mono font-bold tracking-widest text-slate-500 uppercase border border-slate-800 px-2.5 py-1 rounded-full">
-                      Pilar 0{idx + 1}
+                      Serviço 0{idx + 1}
                     </span>
                   </div>
 
@@ -116,7 +116,7 @@ export function ServicesPilars() {
                       href="#diagnostico"
                       className="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 uppercase tracking-wider group-hover:translate-x-1 transition-transform"
                     >
-                      <span>Aplicar este Pilar</span>
+                      <span>Quero esta Solução</span>
                       <ArrowUpRight className="w-4 h-4" />
                     </a>
                   </div>

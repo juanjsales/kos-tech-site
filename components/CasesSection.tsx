@@ -9,32 +9,32 @@ export function CasesSection() {
   const featuredCases = [
     {
       id: "case-infoprodutos",
-      badge: "Case 01 | Infoprodutos & Lançamentos",
+      badge: "Exemplo 01 | Infoprodutos & Lançamentos",
       icon: Rocket,
-      title: "Picos de Tráfego Massivo & Captura Instantânea",
-      subtitle: "Arquitetura Edge Serverless para Lançamentos Digitais",
-      desafio: "Quedas repentinas de servidor em momentos de pico de tráfego de tráfego pago (Meta Ads / Google Ads) e perda de leads por lentidão nos formulários tradicionais.",
-      solucao: "Landing Pages de alta conversão desenvolvidas em Next.js e hospedadas na CDN Serverless Global. Captura assíncrona de formulários com disparo automático no WhatsApp em menos de 200ms.",
+      title: "Zero Lags & Atendimento Automático de Clientes",
+      subtitle: "Vendas sem Interrupções para Campanhas e Anúncios",
+      desafio: "Sites tradicionais que caem nos momentos de maior tráfego de anúncios ou demoram para carregar o formulário, fazendo você perder vendas.",
+      solucao: "Páginas super rápidas e blindadas contra quedas de acessos. Envio automático dos dados do cliente direto no WhatsApp da sua equipe em menos de 1 segundo.",
       metricas: [
-        "100% de Uptime durante picos de 5.000 acessos simultâneos",
-        "Tempo de carregamento inicial: 0.8s",
-        "Aumento de 32% na taxa de conversão de leads"
+        "100% no ar mesmo com milhares de acessos juntos",
+        "Carregamento do site em menos de 1 segundo",
+        "Aumento real na conversão de novos clientes"
       ],
       accentColor: "from-blue-500/20 to-cyan-500/10",
       badgeStyle: "text-cyan-400 border-cyan-500/30 bg-cyan-950/60"
     },
     {
       id: "case-ongs",
-      badge: "Case 02 | Terceiro Setor & ONGs",
+      badge: "Exemplo 02 | ONGs & Impacto Social",
       icon: HeartHandshake,
-      title: "Portais Institucionais com Selo de Impacto Digital",
-      subtitle: "Transparência, Acessibilidade & Retenção de Doadores",
-      desafio: "Falta de clareza na prestação de contas para parceiros B2B/doadores, layout ultrapassado não otimizado para celulares e barreiras de acessibilidade para pessoas com deficiência.",
-      solucao: "Plataforma institucional com Selo de Impacto Digital, painel interativo de transparência financeira, total conformidade com acessibilidade WCAG 2.1 e otimização SEO.",
+      title: "Portais Transparentes & Fáceis de Usar",
+      subtitle: "Acessibilidade para Todos & Confiança para Doadores",
+      desafio: "Falta de clareza na prestação de contas para parceiros/doadores e sites antigos que não funcionam direito no celular ou para pessoas com deficiência.",
+      solucao: "Portais institucionais com Selo de Impacto Digital, painel visual de prestação de contas, total acessibilidade e facilidade de doação.",
       metricas: [
-        "Certificação de Acessibilidade Digital 100%",
-        "Redução de 90% nos custos de hospedagem",
-        "Aumento na captação recorrente de doadores"
+        "Acessível para qualquer pessoa em qualquer dispositivo",
+        "Redução drástica nos custos com servidores",
+        "Maior transparência e retenção de apoiadores"
       ],
       accentColor: "from-purple-500/20 to-emerald-500/10",
       badgeStyle: "text-emerald-400 border-emerald-500/30 bg-emerald-950/60"
@@ -48,13 +48,13 @@ export function CasesSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 bg-cyan-950/60 border border-cyan-800/60 px-3.5 py-1.5 rounded-full inline-block">
-            Cases de Sucesso & Portfólio
+            Cases & Exemplos Reais
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white font-sans tracking-tight">
-            Resultados Reais: Desafio vs. Solução
+            Como Resolvemos Problemas Reais
           </h2>
           <p className="text-slate-400 text-base md:text-lg">
-            Veja como transformamos problemas complexos em soluções digitais de alta conversão e performance auditada.
+            Veja a comparação simples entre os problemas que sua empresa enfrenta e como nossas soluções resolvem na prática.
           </p>
         </div>
 
@@ -96,7 +96,7 @@ export function CasesSection() {
                   <div className="p-4 rounded-xl bg-red-950/20 border border-red-900/40 space-y-1.5">
                     <div className="flex items-center gap-2 text-xs font-bold font-mono text-red-400 uppercase tracking-wider">
                       <AlertTriangle className="w-4 h-4 flex-shrink-0" />
-                      <span>O Desafio</span>
+                      <span>O Problema / Desafio</span>
                     </div>
                     <p className="text-xs text-slate-300 leading-relaxed">
                       {item.desafio}
@@ -107,7 +107,7 @@ export function CasesSection() {
                   <div className="p-4 rounded-xl bg-emerald-950/20 border border-emerald-900/40 space-y-1.5">
                     <div className="flex items-center gap-2 text-xs font-bold font-mono text-emerald-400 uppercase tracking-wider">
                       <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
-                      <span>A Solução KOS</span>
+                      <span>Nossa Solução</span>
                     </div>
                     <p className="text-xs text-slate-300 leading-relaxed">
                       {item.solucao}
@@ -117,7 +117,7 @@ export function CasesSection() {
                   {/* Metricas */}
                   <div className="space-y-2 border-t border-slate-800 pt-4">
                     <span className="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider block">
-                      Resultados Medidos:
+                      Resultados Alcançados:
                     </span>
                     <ul className="space-y-1.5 text-xs text-slate-300 font-mono">
                       {item.metricas.map((metrica, mIdx) => (
@@ -135,7 +135,7 @@ export function CasesSection() {
                     href="#diagnostico"
                     className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-cyan-400 hover:text-cyan-300"
                   >
-                    <span>Solicitar Projeto Semelhante</span>
+                    <span>Quero um Projeto Parecido</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
@@ -148,11 +148,11 @@ export function CasesSection() {
         <div className="space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
             <div>
-              <h3 className="text-2xl font-bold text-white">Sistemas & Aplicações em Produção</h3>
-              <p className="text-xs text-slate-400">Projetos ao vivo desenvolvidos com a tecnologia KOS (Borda RGB Neon Ativa)</p>
+              <h3 className="text-2xl font-bold text-white">Sistemas & Sites em Funcionamento</h3>
+              <p className="text-xs text-slate-400">Clique para abrir o site ou passar o mouse para ver a prévia em vídeo</p>
             </div>
             <span className="text-xs font-mono text-cyan-400 uppercase tracking-wider bg-slate-900 border border-slate-800 px-3 py-1 rounded-full">
-              4 Projetos Auditados
+              4 Projetos Ativos
             </span>
           </div>
 
